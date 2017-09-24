@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/SemanticSugar/traildb-go"
+	"github.com/traildb/traildb-go"
 )
 
 type Ev struct {
@@ -56,7 +56,7 @@ func main() {
 	fmt.Println(db.Version())
 
 	var total int
-	for i := 0; i < db.NumTrails; i++ {
+	for i := uint64(0); i < db.NumTrails; i++ {
 		trail, err := tdb.NewTrail(db, i)
 		if err != nil {
 			panic(err.Error())
