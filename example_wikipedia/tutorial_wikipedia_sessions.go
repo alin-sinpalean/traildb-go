@@ -2,8 +2,9 @@ package main
 
 import (
 	"fmt"
-	"github.com/traildb/traildb-go"
 	"os"
+
+	"github.com/traildb/traildb-go"
 )
 
 var SESSION_LIMIT = uint64(30 * 60)
